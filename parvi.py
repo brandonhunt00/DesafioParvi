@@ -1,7 +1,7 @@
 import rpa as r
 import pandas as pd
 
-df= pd.read_excel(C:\Users\Brandon Hunt\Downloads\challenge.xlxs)
+df= pd.read_excel(C:\Users\Brandon Hunt\Downloads\challenge.xlsx)
 
 r.init()
 
