@@ -1,24 +1,26 @@
-import rpa as r
-import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
 
-df= pd.read_excel(C:\Users\Brandon Hunt\Downloads\challenge.xlsx)
+driver = webdriver.Chrome()
 
-r.init()
+driver.get("http://rpachallenge.com/")
 
-r.url('http://www.rpachallenge.com/')
-r.wait(10)
-r.click('//button[text()="Start"]')
+time.sleep(5)
 
-for index,row in df.iterrows():
-    r.type('//input[@ng-reflect-name="labelFirstName"]',row['First Name'])
-    r.type('//input[@ng-reflect-name="labelLastName"]',row['Last Name '])
-    r.type('//input[@ng-reflect-name="labelCompanyName"]',row['Company Name'])
-    r.type('//input[@ng-reflect-name="labelRole"]',row['Role in Company'])
-    r.type('//input[@ng-reflect-name="labelAddress"]',row['Address'])
-    r.type('//input[@ng-reflect-name="labelEmail"]',row['Email'])
-    r.type('//input[@ng-reflect-name="labelPhone"]',str(row['Phone Number']))
-    r.click('//input[@value="Submit"]')
+start_button = driver.find_element(By.XPATH, "//button[contains(text(),'Start')]")
+start_button.click()
 
-r.snap('/html/body/app-root/div[2]','results.png')
+time.sleep(3)
 
-r.close()
+inputs = driver.find_elements(By.CLASS_NAME, "tableCell")
+for i, input_field in enumerate(inputs):
+    input_field.send_keys(str(i + 1))
+
+submit_button = driver.find_element(By.XPATH, "//button[contains(text(),'Submit')]")
+submit_button.click()
+
+time.sleep(3)
+
+driver.quit()
