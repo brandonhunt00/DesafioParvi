@@ -9,7 +9,7 @@ O objetivo deste desafio é desenvolver um script que automatize o preenchimento
 - IDE: VSCode
 
 # Estrutura do Projeto
-- parvi: Contém o código fonte do projeto.
+- parvi.py: Contém o código fonte do projeto.
 - README.md: Este arquivo que fornece uma visão geral do projeto.
 
 # Como Utilizar
