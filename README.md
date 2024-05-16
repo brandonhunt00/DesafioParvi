@@ -13,10 +13,10 @@ O objetivo deste desafio é desenvolver um script que automatize o preenchimento
 - README.md: Este arquivo que fornece uma visão geral do projeto.
 
 # Como Utilizar
-1- Clone este repositório para sua máquina local.
-2- Instale as dependências necessárias.
-3- Execute o script principal para iniciar o processo de automação.
-4- Aguarde a conclusão das 10 rodadas do desafio e verifique os resultados.
+- Clone este repositório para sua máquina local.
+- Instale as dependências necessárias.
+- Execute o script principal para iniciar o processo de automação.
+- Aguarde a conclusão das 10 rodadas do desafio e verifique os resultados.
 
 # Referências
 - [RPA Challenge](https://rpachallenge.com/): Website oficial do desafio RPA.
